@@ -2,7 +2,7 @@ import numpy as np
 import pandas as pd
 
 
-def generate_light_data(n_samples=100, k=1000, noise=0.0):
+def generate_light_data(n_samples=100, k=1000, noise=0.0, max_distance=10):
     """
     
     Creates synthetic data simulating the inverse-square law for intensity of light with some noise constant to be used for training the model.
@@ -11,14 +11,15 @@ def generate_light_data(n_samples=100, k=1000, noise=0.0):
         n_samples (int [optional]): Number of samples to be generated. Default = 100.
         k (int [optional]): Proportionality constant dictating intensity of the light "source". Default = 1000.
         noise (float [optional]): Noise factor to account for real world situations like reflection/absorption of light. Default = 0.0.
+        max_distance (int [optional]): The max distance (r) to compare light intensity with. Default = 10
 
     Returns:
-        DataFrame: 2 dimensional pandas data table containing x-variable distance and y-variable intensity.
+        DataFrame: 2-dimensional pandas data table containing x-variable distance and y-variable intensity.
         
     """
     
     # Distances (1m to 25m)
-    distances = np.linspace(1, 25, n_samples)
+    distances = np.linspace(1, max_distance, n_samples)
 
     # Inverse-square law of light (I = k / d^2)
     intensity = k / distances**2
