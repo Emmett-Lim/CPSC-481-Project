@@ -49,18 +49,18 @@ You should now you are ready to start this project!
 
 If using Git:
 
-'''bash
+```bash
 git clone <repository_url>
 cd <project_folder>
-'''
+```
 
 1. Install Dependencies
 
 Run the following line in the terminal to get all the packages required
 
-'''bash
+```bash
 pip install numpy pandas scikit-learn matplotlib
-'''
+```
 
 2. Running the Application
 
