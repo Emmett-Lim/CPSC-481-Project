@@ -8,12 +8,14 @@ def train_models(data_path):
     Trains the machine learning model using linear regression on the inverse-square law equation.
 
     Args:
-        data_path (string): The path to the data set (csv file)
+        data_path (string): The path to the data set (csv file).
 
     Returns:
-        - linreg_model (LinearRegression):
-        - X_test (Pandas DataFrame): 2-dimensional data
-        - y_test (Pandas Series): 1-dimensional data containing outputs for Intensity
+        linreg_model (LinearRegression): The trained LinearRegression model.
+        
+        X_test (Pandas DataFrame): 2-dimensional data containing feature values of distance.
+        
+        y_test (Pandas Series): 1-dimensional data containing outputs for Intensity.
         
     """
     
@@ -21,6 +23,7 @@ def train_models(data_path):
     df = pd.read_csv(data_path)
     
     # Separate data into x and y variables
+    # Inverted X into (1 / distance_m**2) to linearize the model
     X = 1 / (df[["distance_m"]] ** 2)
     X.columns = ["inv_r2"]
     y = df["intensity"]
