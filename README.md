@@ -42,7 +42,7 @@ Then scroll down to find specific release versions of Python. Download Python ve
 ![Image of specific releases of Python](misc/image-1.png)
 
 Once you download it, click on it and you should see a program that pops up. Below inside that program window, check the box
-that says "Add python.exe to PATH".
+that says "Add python.exe to PATH" and make sure the box for "Use admin privileges when installing py.exe" is marked as check as well.
 ![Python installation program](misc/image-2.png)
 
 Now click on "Customize Installation" and make sure that "pip" box is checked.
