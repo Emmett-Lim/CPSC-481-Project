@@ -1,6 +1,10 @@
 # CPSC-481 Project
 
-description.
+This project aims to develop a machine learning model capable of predicting light intensity at
+varying distances from a light source. The relationship between light intensity and distance is
+governed by the inverse-square law, which states that intensity decreases proportionally to the
+square of the distance. However, in real-world conditions, factors such as ambient light, sensor
+noise, absoprtions and reflections of light introduce deviations from the ideal model.
 
 ## Prerequisites
 
