@@ -32,7 +32,7 @@ def evaluate_models(data_path, data_tuple):
     lin_model, X_test, y_test = data_tuple
     y_pred_lin = lin_model.predict(X_test)
 
-    # Metrics
+    # Linear Regression Metrics
     linreg_r2 = r2_score(y_test, y_pred_lin)
     linreg_rmse = root_mean_squared_error(y_test, y_pred_lin)
     linreg_mae = mean_absolute_error(y_test, y_pred_lin)
